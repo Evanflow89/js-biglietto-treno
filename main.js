@@ -25,6 +25,6 @@ if (ageUser <= 18) {
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
-const finalPrice = Math.round(discount);
+const finalPrice = (Math.round(discount * 100) / 100).toFixed(2);
 
 console.log(`Il prezzo del tuo biglietto è di €${finalPrice}`);
