@@ -9,7 +9,7 @@ const ageUser = Number(prompt("Indica la tua età"));
 // il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const priceKm = numKm * 0.21;
 // va applicato uno sconto del 20% per i minorenni
-
+// va applicato uno sconto del 40% per gli over 65.
 let discount;
 
 if (ageUser <= 18) {
@@ -20,8 +20,11 @@ if (ageUser <= 18) {
     discount = priceKm
 }
 
-console.log(discount);
-// va applicato uno sconto del 40% per gli over 65.
+
+
 // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
+const finalPrice = Math.round(discount);
+
+console.log(`Il prezzo del tuo biglietto è di €${finalPrice}`);
